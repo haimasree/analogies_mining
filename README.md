@@ -10,6 +10,8 @@ This repository contains the code for the paper: https://arxiv.org/abs/2210.1219
 ## Setup
 The code is implemented in python 3.8.12. To run it, please install the requirements.txt file:
 ```bash
+conda create -n py3812 python=3.8.12
+conda activate py3812
 pip install -r requirements.txt
 ```
 
