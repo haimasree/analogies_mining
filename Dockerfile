@@ -4,5 +4,8 @@ RUN mkdir -p /app
 
 WORKDIR /app
 
-COPY requirementsmod.txt /app/requirementsmod.txt
+COPY minimalrequirements.txt /app/minimalrequirements.txt
 
+RUN pip install -r minimalrequirements.txt
+
+CMD ["/bin/bash"]

@@ -1,4 +1,9 @@
+### Dockerfile edition
 
+```
+docker build -t haimasree/analogiesmining:latest . 
+docker run -it -v .:/app haimasree/analogiesmining:latest
+```
 
 # 🎪 Life is a Circus and We are the Clowns 🤡: Automatically Finding Analogies between Situations and Processes 
 This repository contains the code for the paper: https://arxiv.org/abs/2210.12197. </br>
