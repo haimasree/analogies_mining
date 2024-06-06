@@ -1,7 +1,6 @@
-1	Security guards monitor the doors of the factory.
-2	Security guards control the movement of people into and out of the factory.
-3	Factory activities may be coordinated by a control center.
-4	These activities require energy.
-5	The electrical generators in the factory provide energy.
-6	The factory synthesizes products from raw materials using machines.
-7	The factory has hallways to move products through the factory
+1	Carbon dioxide from the air passes through small pores (holes) in the leaves These pores are called stomata.
+2	Water is absorbed by the roots and passes through vessels in the stem on its way to the leaves.
+3	Chlorophyll absorbs the sun's energy.
+4	It is this energy that is used to split water molecules into hydrogen and oxygen.
+5	Oxygen is released from the leaves into the atmosphere.
+6	Hydrogen and carbon dioxide are used to form glucose or food for plants.
