@@ -3,7 +3,7 @@ import importlib
 from allennlp.common.util import import_submodules
 importlib.invalidate_caches()
 import sys
-sys.path.append("/Users/orensultan/PycharmProjects/TextAnalogiesMining/qasrl-modeling/")
+sys.path.append("/app/qasrl-modeling/")
 print(sys.path)
 import_submodules("qasrl")
 

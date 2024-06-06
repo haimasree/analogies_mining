@@ -11,7 +11,7 @@ porterStemmer = PorterStemmer()
 
 
 text_files_dir = '../data/original_text_files'
-qasrl_prefix_path = './qasrl-modeling/data/'
+qasrl_prefix_path = '/app/qasrl-modeling/data/'
 qasrl_suffix_path = '_span_to_question.jsonl'
 
 num_mappings_to_show = 7
@@ -31,7 +31,8 @@ def run_analogous_matching_algorithm(model_name, cos_sim_threshold, pair_of_inpu
     """
     os.chdir('s2e-coref')
     text_file_names = get_text_file_names(pair_of_inputs)
-
+    # text_file_names = ["0a28d865cf9045689bb25289f2118ef3_1.txt", "0a28d865cf9045689bb25289f2118ef3_2.txt",]
+    
     if run_coref:
         create_coref_text_files(text_file_names)
 
@@ -46,7 +47,7 @@ def run_analogous_matching_algorithm(model_name, cos_sim_threshold, pair_of_inpu
             solution1, solution2, solution3 = run_model(model_name, pair, cos_sim_threshold)
             if solution1 is None:
                 continue
-
+        
             plot_bipartite_graph(solution1[:num_mappings_to_show], colors[:num_mappings_to_show], cos_sim_threshold)
 
             if solution2:
@@ -111,8 +112,9 @@ if __name__ == '__main__':
     cos_sim_threshold = MODELS_SIM_THRESHOLD[model_name]
 
     # uncomment to run this example (change pair_of_inputs to run on a different pair)
+    pair_of_inputs = [("0a28d865cf9045689bb25289f2118ef3_1", "0a28d865cf9045689bb25289f2118ef3_2"),]
     # pair_of_inputs = [('propara_para_id_686', 'propara_para_id_687')]
-    # run_analogous_matching_algorithm(model_name, cos_sim_threshold, pair_of_inputs)
+    run_analogous_matching_algorithm(model_name, cos_sim_threshold, pair_of_inputs, run_coref=True, run_qasrl=True)
 
     # uncomment to run this example (notice that cosine_similarity is 0.85 instead of 0.7 for this example)
     # pair_of_inputs = [('animal_cell', 'factory')]

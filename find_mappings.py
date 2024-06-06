@@ -447,7 +447,7 @@ def plot_bipartite_graph(clusters_scores, colors, cos_similarity_threshold):
     weights = list(nx.get_edge_attributes(B, 'weight').values())
     nx.draw(B, pos=pos, edge_color=colors, width=weights, with_labels=True, node_color='lightgreen')
     plt.title("Analogies found(chosen cosine similarity threshold=" + str(cos_similarity_threshold) + "):")
-    plt.show()
+    plt.savefig("plotwithcorefqsarlnewfilewithpairofinputs.png")
 
 
 def convert_cluster_set_to_string(cluster_set, side):

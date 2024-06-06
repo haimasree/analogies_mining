@@ -6,7 +6,8 @@ nlp = en_core_web_sm.load()
 
 coref_predict_file_path = 'predict.py'
 coref_input_file_path = 'input_files/input.jsonl'
-text_files_dir = '../data/original_text_files'
+# text_files_dir = '../data/original_text_files'
+text_files_dir = '/app/uploads'
 coref_text_files_dir = '../data/coref_text_files'
 
 replace_one_word_token_with_cluster_representative = True
@@ -30,6 +31,7 @@ def main():
 
 
 def create_coref_text_files(original_text_files):
+
     for text_input_file in original_text_files:
         text_input_file_path = text_files_dir + "/" + text_input_file
         create_coref_input_file(text_input_file_path, coref_input_file_path)
